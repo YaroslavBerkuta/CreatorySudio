@@ -16,7 +16,9 @@
     <div class="cursor__tail"></div>
     <header class="header">
         <div class="header__logo">
-            <img src="./img/logo.svg" alt="logo" class="logo">
+            <a href="./index.html">
+                <img src="./img/logo.svg" alt="logo" class="logo">
+            </a>
         </div>
         <div class="header__burger">
             <div class="burger">
@@ -27,8 +29,8 @@
         </div>
     </header>
     <main class="main">
-        <section>
-            
+        <section class="bg-video" id="top">
+            <video src="./img/bg.mov" muted loop autoplay height="100%" width="100%"></video>
         </section>
         <section>
             <div class="container">
@@ -146,13 +148,45 @@
         </section>
         <section>
             <div class="container">
-                
+                <div class="flex__wrapper">
+                    <p class="title__lable">Get started</p>
+                    <h2 class="title">Let's focus on creating magic</h2>
+                    <a href="" class="btn">Get in touch <img src="./img/upRight.svg" alt=""></a>
+                </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__flex">
+                <div class="footer__item">
+                    <img src="./img/footer-logo.svg" alt="logo">
+                    <p>We are always ready to help you in any question and are open to dialogue at any time.</p>
+                    <a href="mailto:magic@creatory.studio">magic@creatory.studio</a>
+                    <p>©Creatory , Inc.</p>
+                </div>
+                <div class="footer__item">
+                    <h3>Call</h3>
+                    <a href="tel:+380970391011">+380 97 039 10 11</a>
+                </div>
+                <div class="footer__item">
+                    <h3>Social</h3>
+                    <a href="">Telegram</a>
+                    <a href="">Instagram</a>
+                    <a href="">Whatsapp</a>
+                </div>
+                <div class="footer__item">
+                    <h3>Office</h3>
+                    <p>204 Creatory Studio
+                        Verkhnoberehovyi provulok 11 
+                        Khmelnytskyi, Ukraine</p>
+                </div>
+            </div>
+        </div>
     </footer>
+    <a class="section-nav" href="#top">
+        Services
+    </a>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./js/main.min.js"></script>
 </body>

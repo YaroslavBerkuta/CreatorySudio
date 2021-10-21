@@ -14,7 +14,7 @@ function testWebP(callback) {
     }else{
     document.querySelector('body').classList.add('no-webp');
     }
-    });
+    });;
 
 
 const swiper = new Swiper('.coments__flex', {
@@ -25,6 +25,7 @@ const swiper = new Swiper('.coments__flex', {
     loop: true,
     grabCursor: true
 });
+
 const header = document.querySelector(".header")
 const headerBurger = document.querySelector(".header__burger")
 const cursor = document.querySelector(".cursor")
@@ -32,4 +33,6 @@ const cursorTail = document.querySelector(".cursor__tail")
 document.addEventListener("mousemove", (e)=>{
   cursor.setAttribute("style", "top:"+e.pageY+"px; left:"+e.pageX+"px")
   cursorTail.setAttribute("style", "top:"+e.pageY+"px; left:"+e.pageX+"px")
-})
+});
+
+
