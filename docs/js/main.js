@@ -391,7 +391,7 @@ $('.order__form').on('submit', function (event) {
     });
     
     $.ajax({
-        url: './index.php',
+        url: 'https://yaroslavberkuta.github.io/CreatorySudio/index.php',
         type: 'POST',
         data: data,
         cache: false,
@@ -423,7 +423,7 @@ $('.order__form').on('submit', function (event) {
 			formPreview.innerHTML = ''
 			$('.checkbox__item').removeClass("active")
             form.reset()
-			window.location = '/thanks.html';
+			window.location = 'https://yaroslavberkuta.github.io/CreatorySudio/thanks.html';
         }
     });
 
