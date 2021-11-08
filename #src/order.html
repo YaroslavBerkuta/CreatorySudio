@@ -49,65 +49,65 @@
         <section class="pt-100">
             <div class="container">
                 <h1 class="title">Let's create something truly magical</h1>
-                <form action="" class="order__form" method="post">
+                <form  class="order__form" method="post">
                     <div class="order__section">
                         <h3>I am interesting in</h3>
                         <div class="order__checkbox">
                             <label for="webDesign" class="checkbox__item">
                                 <p>Web design</p>
-                                <input type="checkbox" id="webDesign">
+                                <input type="checkbox" id="webDesign" value="web Design">
                             </label>
                             <label for="Appdesign" class="checkbox__item">
                                 <p>App design</p>
-                                <input type="checkbox" id="Appdesign">
+                                <input type="checkbox" id="Appdesign" value="App design">
                             </label>
                             <label for="Branding" class="checkbox__item">
                                 <p>Branding</p>
-                                <input type="checkbox" id="Branding">
+                                <input type="checkbox" id="Branding" value="Branding">
                             </label>
                             <label for="Illustrations" class="checkbox__item">
                                 <p>Illustrations</p>
-                                <input type="checkbox" id="Illustrations">
+                                <input type="checkbox" id="Illustrations" value="Illustrations" >
                             </label>
                             <label for="Frontend" class="checkbox__item">
                                 <p>Frontend</p>
-                                <input type="checkbox" id="Frontend">
+                                <input type="checkbox" id="Frontend" value="Frontend">
                             </label>
                             <label for="Backend" class="checkbox__item">
                                 <p>Backend</p>
-                                <input type="checkbox" id="Backend">
+                                <input type="checkbox" id="Backend" value="Backend">
                             </label>
                             <label for="CMS" class="checkbox__item">
                                 <p>CMS</p>
-                                <input type="checkbox" id="CMS">
+                                <input type="checkbox" id="CMS" value="CMS">
                             </label>
                             <label for="CRM" class="checkbox__item">
                                 <p>CRM</p>
-                                <input type="checkbox" id="CRM">
+                                <input type="checkbox" id="CRM" value="CRM">
                             </label>
                             <label for="Bot" class="checkbox__item">
                                 <p>Bot</p>
-                                <input type="checkbox" id="Bot">
+                                <input type="checkbox" id="Bot" value="Bot" >
                             </label>
                             <label for="SEO" class="checkbox__item">
                                 <p>SEO</p>
-                                <input type="checkbox" id="SEO">
+                                <input type="checkbox" id="SEO" value="SEO">
                             </label>
                             <label for="SMM" class="checkbox__item">
                                 <p>SMM</p>
-                                <input type="checkbox" id="SMM">
+                                <input type="checkbox" id="SMM" value="SMM">
                             </label>
                             <label for="Target" class="checkbox__item">
                                 <p>Target</p>
-                                <input type="checkbox" id="Target">
+                                <input type="checkbox" id="Target" value="Target">
                             </label>
                             <label for="Copywriting" class="checkbox__item">
                                 <p>Copywriting</p>
-                                <input type="checkbox" id="Copywriting">
+                                <input type="checkbox" id="Copywriting" value="Copywriting">
                             </label>
                             <label for="Other" class="checkbox__item">
                                 <p>Other</p>
-                                <input type="checkbox" id="Other">
+                                <input type="checkbox" id="Other" value="Other">
                             </label>
                         </div>
                     </div>
@@ -116,10 +116,10 @@
                         <fiedlset class="cost">
                             <p class="cost__inputs">
                               <label class="cost__label">$
-                                <input class="cost__input" type="number" value="0" min="0" max="100000"/>
+                                <input class="cost__input" type="number" value="0" min="0" max="50000" name="minPrice"/>
                               </label>
                               <label class="cost__label">$
-                                <input class="cost__input" type="number" value="9000" min="0" max="100000"/>
+                                <input class="cost__input" type="number" value="9000" min="0" max="50000" name="maxprice"/>
                               </label>
                               <label class="price__estimate" for="estimate">
                                 I need estimate
@@ -130,36 +130,37 @@
                             </label>
                             </p>
                             <p class="range-slider cost__range" style="--first-val: 0%; --second-val: 75%;">
-                              <input class="range-slider__input" type="range" min="0" max="100000" value="0" step="100" aria-label="Min range"/>
-                              <input class="range-slider__input" type="range" min="0" max="100000" value="9000" step="100" aria-label="Max range"/>
+                              <input class="range-slider__input" type="range" min="0" max="50000" value="0" step="100" aria-label="Min range"/>
+                              <input class="range-slider__input" type="range" min="0" max="50000" value="9000" step="100" aria-label="Max range"/>
                             </p>
                           </fiedlset>
                     </div>
                     <div class="order__section">
                        <div class="order__section-flex">
-                            <input type="text" placeholder="Your name">
-                            <input type="text" placeholder="Your email">
+                            <input type="text" placeholder="Your name" name="user_name" required>
+                            <input type="text" placeholder="Your email" name="user_email" required>
                             <div class="order__file">
-                                <textarea placeholder="Project details (optional)"></textarea>
+                                <textarea placeholder="Project details (optional)" name="user_message"></textarea>
                                 <label for="file">
                                     <img src="./img/file.svg" alt="">
-                                    <input type="file" id="file">
+                                    <input type="file" class="fileImg" id="file" name="file">
                                 </label>
                             </div>
+                            <div class="file__preview" id="filePreview"></div>
                        </div>
                     </div>
                     <div class="order__section">
                         <div class="order__section-flex">
                             <label class="price__estimate" for="NDA">
                                 I need NDA
-                                <input type="checkbox"id="NDA" />
+                                <input type="checkbox" id="NDA" name="NDA" />
                                 <svg viewBox="0 0 24 24" filter="url(#goo-light)">
                                     <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
                                 </svg>
                             </label>
                             <label class="price__estimate" for="Whitelabel">
                                 White label
-                                <input type="checkbox"id="Whitelabel" />
+                                <input type="checkbox" id="Whitelabel" name="Whitelabel"/>
                                 <svg viewBox="0 0 24 24" filter="url(#goo-light)">
                                     <path class="tick" d="M4.5 10L10.5 16L24.5 1" />
                                 </svg>

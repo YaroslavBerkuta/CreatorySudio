@@ -171,7 +171,7 @@ header {
   position: fixed;
   top: 48px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: 0 64px 0 64px;
   z-index: 5;
   -webkit-transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -193,13 +193,8 @@ header .nav .title {
 }
 
 header .nav .toggle {
-  position: absolute;
-  margin: auto;
   width: 46px;
   height: 46px;
-  right: 120px;
-  top: 0;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1387,6 +1382,7 @@ input[type=checkbox] {
 }
 
 .order__section-flex .order__file {
+  margin-right: 120px;
   position: relative;
   margin-top: 24px;
   -webkit-box-flex: 0;
@@ -1474,4 +1470,74 @@ input[type=checkbox] {
   -webkit-box-shadow: inset 20px 0 10px white;
           box-shadow: inset 20px 0 10px white;
   border-radius: 25px;
+}
+
+.animate {
+  opacity: 0;
+  -webkit-transform: translateY(400px);
+      -ms-transform: translateY(400px);
+          transform: translateY(400px);
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.animate.test {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.file__preview {
+  margin-top: 64px;
+  max-width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.file__preview img {
+  border-radius: 8px;
+}
+
+.file__preview p {
+  color: white;
+  margin-top: 10px;
+}
+
+.thanks__flex {
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thanks__flex p {
+  margin: 48px 0 128px 0;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #FFFFFF;
 }
