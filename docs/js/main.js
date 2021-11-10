@@ -326,18 +326,70 @@ function changeActive(e) {
 
 
 
+const section = document.querySelectorAll("section")
+const sectionNav = document.querySelector(".section-nav")
 
 
-const section = document.querySelectorAll(".animate")
+	window.addEventListener("scroll", mouseCheak())
+
+
+function mouseCheak(){
+	section.forEach(item=>{
+		item.addEventListener("mouseenter",(e)=>{
+			switch (e.target.id) {
+				case "top":
+				  sectionNav.textContent = "About"
+				  sectionNav.setAttribute('href','#about')
+				  break
+				case "about":
+					sectionNav.textContent = "Service"
+					sectionNav.setAttribute('href','#service')
+					break
+				case "service":
+					sectionNav.textContent = "Responce"
+					sectionNav.setAttribute('href','#responce')
+					break
+				case "responce":
+					sectionNav.textContent = "Portfolio"
+					sectionNav.setAttribute('href','#portfolio')
+					break
+				case "portfolio":
+					sectionNav.textContent = "Order"
+					sectionNav.setAttribute('href','#order')
+					break
+				case "order":
+					sectionNav.textContent = "Top"
+					sectionNav.setAttribute('href','#top')
+					break
+			  }
+		})
+	})
+}
+
+
+  $('.section-nav').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top - 350
+    });
+    return false;
+});
+
+
+
+
+const sectionAnimate = document.querySelectorAll(".animate")
 
 window.addEventListener("scroll",()=>{
-	const margeTop = window.scrollY
-	section.forEach(item=>{
+	let margeTop = window.scrollY
+	sectionAnimate.forEach(item=>{
 		const sectionTop = item.offsetTop - 400
 		if(margeTop < sectionTop){
-			item.classList.remove("test")
-		}else if(!item.classList.contains("test") && margeTop > sectionTop){
-			item.classList.add("test")
+			item.classList.remove("fade-top")
+		}else if(!item.classList.contains("fade-top") && margeTop > sectionTop){
+			item.classList.add("fade-top")
 		}
 })
 })
@@ -391,7 +443,7 @@ $('.order__form').on('submit', function (event) {
     });
     
     $.ajax({
-        url: 'https://yaroslavberkuta.github.io/CreatorySudio/index.php',
+        url: 'http://localhost:8888/',
         type: 'POST',
         data: data,
         cache: false,
@@ -423,7 +475,7 @@ $('.order__form').on('submit', function (event) {
 			formPreview.innerHTML = ''
 			$('.checkbox__item').removeClass("active")
             form.reset()
-			window.location = 'https://yaroslavberkuta.github.io/CreatorySudio/thanks.html';
+			window.location = './thanks.html';
         }
     });
 

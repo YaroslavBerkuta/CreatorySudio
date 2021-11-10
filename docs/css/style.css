@@ -1482,7 +1482,7 @@ input[type=checkbox] {
   transition: all .5s ease-in-out;
 }
 
-.animate.test {
+.animate.fade-top {
   opacity: 1;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
