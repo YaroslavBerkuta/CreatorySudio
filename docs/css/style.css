@@ -168,8 +168,9 @@ a {
 }
 
 header {
+  background-color: #000;
   position: fixed;
-  top: 48px;
+  top: 0;
   left: 0;
   width: 100vw;
   padding: 0 64px 0 64px;
@@ -180,6 +181,7 @@ header {
 }
 
 header .nav {
+  padding: 24px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1800,6 +1802,18 @@ input[type=checkbox] {
         -ms-flex-pack: end;
             justify-content: flex-end;
     padding-left: 12px;
+  }
+
+  .cursor {
+    display: none;
+  }
+
+  .cursor__tail {
+    display: none;
+  }
+
+  .coments__flex {
+    overflow: hidden;
   }
 }
 
