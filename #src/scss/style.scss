@@ -719,7 +719,9 @@ footer {
         border: 1px solid transparent;
         &:hover{
           border: 1px solid #EE3831;
-          color:#EE3831;
+          p{
+            color:#EE3831;
+        }
         }
         &.active{
             background-color: #EE3831;
@@ -1364,12 +1366,15 @@ input[type=checkbox]{
     max-width: 45%;
   }
   .cost__input{
-    padding: 11px 0 11px 0;
+    padding: 11px 0 11px 11px;
     max-width: 90%;
   }
   .order__section-flex input[type="text"]{
     flex: 0 0 100%;
     margin-bottom: 20px;
+  }
+  .price__estimate{
+    font-size: 16px;  
   }
   .btn{
     padding-right: 34px;

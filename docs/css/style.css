@@ -1034,6 +1034,9 @@ footer {
 
 .order__checkbox .checkbox__item:hover {
   border: 1px solid #EE3831;
+}
+
+.order__checkbox .checkbox__item:hover p {
   color: #EE3831;
 }
 
@@ -1893,7 +1896,7 @@ input[type=checkbox] {
   }
 
   .cost__input {
-    padding: 11px 0 11px 0;
+    padding: 11px 0 11px 11px;
     max-width: 90%;
   }
 
@@ -1902,6 +1905,10 @@ input[type=checkbox] {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
     margin-bottom: 20px;
+  }
+
+  .price__estimate {
+    font-size: 16px;
   }
 
   .btn {
