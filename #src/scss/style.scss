@@ -95,7 +95,7 @@ a {
   }
   
   header {
-    background-color: #000;
+    backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     left: 0;
@@ -716,6 +716,11 @@ footer {
         border-radius: 25px;
         margin-bottom: 24px;
         transition: all .3s ease-in-out;
+        border: 1px solid transparent;
+        &:hover{
+          border: 1px solid #EE3831;
+          color:#EE3831;
+        }
         &.active{
             background-color: #EE3831;
             p{
@@ -1002,7 +1007,7 @@ input[type=checkbox]{
       margin-right: 120px;
         position: relative;
         margin-top: 24px;
-        flex: 0 0 100%;
+        flex: 0 0 93%;
         background: #151515;
         border-radius: 6px; 
     }
@@ -1306,7 +1311,10 @@ input[type=checkbox]{
   }
   .coments__flex{
     overflow: hidden;
-  } 
+  }
+  .order__section-flex .order__file{
+    flex: 0 0 100%;
+  }
 }
 @media (max-width: 576px){
   .container{

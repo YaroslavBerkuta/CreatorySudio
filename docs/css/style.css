@@ -168,7 +168,8 @@ a {
 }
 
 header {
-  background-color: #000;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   left: 0;
@@ -1028,6 +1029,12 @@ footer {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.order__checkbox .checkbox__item:hover {
+  border: 1px solid #EE3831;
+  color: #EE3831;
 }
 
 .order__checkbox .checkbox__item.active {
@@ -1389,8 +1396,8 @@ input[type=checkbox] {
   position: relative;
   margin-top: 24px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+      -ms-flex: 0 0 93%;
+          flex: 0 0 93%;
   background: #151515;
   border-radius: 6px;
 }
@@ -1814,6 +1821,12 @@ input[type=checkbox] {
 
   .coments__flex {
     overflow: hidden;
+  }
+
+  .order__section-flex .order__file {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
   }
 }
 
