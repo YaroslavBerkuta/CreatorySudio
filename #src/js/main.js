@@ -31,7 +31,16 @@ butonWrapper.forEach(item=>{
         cursor.classList.remove("hover-btn")
     })
 })
+let mm = new MagnetMouse({
+	magnet: {
+	  element: '.magnet',
+	  position: 'center'
+	},
+  });
+  
+  mm.init();
 
+  
 class CostForm {
 	constructor(parentElement) {
 		this.doubleSliderElement = parentElement.querySelector(".range-slider");
@@ -366,10 +375,12 @@ function mouseCheak(){
 
 const sectionAnimate = document.querySelectorAll(".animate")
 
+
+
 window.addEventListener("scroll",()=>{
 	let margeTop = window.scrollY
 	sectionAnimate.forEach(item=>{
-		const sectionTop = item.offsetTop - 400
+		const sectionTop = item.offsetTop - (item.offsetTop / 10)
 		if(margeTop < sectionTop){
 			item.classList.remove("fade-top")
 		}else if(!item.classList.contains("fade-top") && margeTop > sectionTop){
