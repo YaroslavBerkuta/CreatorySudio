@@ -9,6 +9,13 @@ const swiper = new Swiper('.coments__flex', {
     loop: true,
 });
 
+
+
+
+
+
+
+
 const cursor = document.querySelector(".cursor")
 const cursorTail = document.querySelector(".cursor__tail") 
 const butonWrapper = document.querySelectorAll(".btn__wrapper")
@@ -319,68 +326,30 @@ function changeActive(e) {
 
 
 
-const section = document.querySelectorAll("section")
-const sectionNav = document.querySelector(".section-nav")
-
-
-	window.addEventListener("scroll", mouseCheak())
-
-
-function mouseCheak(){
-	section.forEach(item=>{
-		item.addEventListener("mouseenter",(e)=>{
-			switch (e.target.id) {
-				case "top":
-				  sectionNav.textContent = "About"
-				  sectionNav.setAttribute('href','#about')
-				  break
-				case "about":
-					sectionNav.textContent = "Service"
-					sectionNav.setAttribute('href','#service')
-					break
-				case "service":
-					sectionNav.textContent = "Responce"
-					sectionNav.setAttribute('href','#responce')
-					break
-				case "responce":
-					sectionNav.textContent = "Portfolio"
-					sectionNav.setAttribute('href','#portfolio')
-					break
-				case "portfolio":
-					sectionNav.textContent = "Order"
-					sectionNav.setAttribute('href','#order')
-					break
-				case "order":
-					sectionNav.textContent = "Top"
-					sectionNav.setAttribute('href','#top')
-					break
-			  }
-		})
-	})
-}
-
-
-  $('.section-nav').on('click', function() {
-
-    let href = $(this).attr('href');
-
-    $('html, body').animate({
-        scrollTop: $(href).offset().top - 350
-    });
-    return false;
-});
-
 
 
 
 const sectionAnimate = document.querySelectorAll(".animate")
-
+const about = document.querySelector(".about")
+const aboutRight = document.querySelector(".aboutUs__right")
+const aboutRightItem = document.querySelectorAll(".aboutUs__right-item")
 
 
 window.addEventListener("scroll",()=>{
+	if(about.classList.contains("fade-top")){
+		aboutRight.classList.add("active")
+		aboutRightItem.forEach(item=>{
+			item.classList.add("active")
+		})
+	}else{
+		aboutRight.classList.remove("active")
+		aboutRightItem.forEach(item=>{
+			item.classList.remove("active")
+		})
+	}
 	let margeTop = window.scrollY
 	sectionAnimate.forEach(item=>{
-		const sectionTop = item.offsetTop - (item.offsetTop / 10)
+		const sectionTop = item.offsetTop - (item.offsetTop / 5)
 		if(margeTop < sectionTop){
 			item.classList.remove("fade-top")
 		}else if(!item.classList.contains("fade-top") && margeTop > sectionTop){
@@ -503,5 +472,9 @@ function uploadFile(file){
 	}
 	reader.readAsDataURL(file);
 }
+
+
+
+
 
 new CostForm(document.querySelector(".cost"));

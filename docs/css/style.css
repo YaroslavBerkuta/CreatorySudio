@@ -110,6 +110,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .bg-video {
@@ -663,6 +664,64 @@ header .nav nav.open .menu {
   padding: 7px;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.aboutUs__right {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: all .8s linear 1s;
+  -o-transition: all .8s linear 1s;
+  transition: all .8s linear 1s;
+}
+
+.aboutUs__right :nth-child(2) {
+  -webkit-transition: all .4s linear 2s;
+  -o-transition: all .4s linear 2s;
+  transition: all .4s linear 2s;
+}
+
+.aboutUs__right :nth-child(3) {
+  -webkit-transition: all .4s linear 2.5s;
+  -o-transition: all .4s linear 2.5s;
+  transition: all .4s linear 2.5s;
+}
+
+.aboutUs__right :last-child {
+  -webkit-transition: all .4s linear 2.9s;
+  -o-transition: all .4s linear 2.9s;
+  transition: all .4s linear 2.9s;
+}
+
+.aboutUs__right.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.aboutUs__right-item {
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: all .4s linear 2s;
+  -o-transition: all .4s linear 2s;
+  transition: all .4s linear 2s;
+}
+
+.aboutUs__right-item.active {
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+          transform: translate(0);
+  opacity: 1;
+}
+
 .coments__item {
   background: #151515;
   -webkit-backdrop-filter: blur(42px);
@@ -908,7 +967,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
+  position: absolute;
   bottom: 10%;
   right: 0;
   z-index: 10;
@@ -1112,10 +1171,8 @@ footer {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   padding-right: 16px;
+  padding-left: 26px;
   background-color: #151515;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 150px;
-          flex: 0 0 150px;
   border-radius: 6px;
 }
 
@@ -1129,7 +1186,10 @@ footer {
 
 .cost__input {
   all: unset;
-  color: #fff;
+  color: #8B8B8B;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
