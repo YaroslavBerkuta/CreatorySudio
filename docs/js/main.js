@@ -343,7 +343,7 @@ function changeActive(e) {
 
 
 
-
+const section = document.querySelectorAll("section")
 
 const sectionAnimate = document.querySelectorAll(".animate")
 const about = document.querySelector(".about")
@@ -351,28 +351,48 @@ const aboutRight = document.querySelector(".aboutUs__right")
 const aboutRightItem = document.querySelectorAll(".aboutUs__right-item")
 
 
-window.addEventListener("scroll",()=>{
-	if(about.classList.contains("fade-top")){
-		aboutRight.classList.add("active")
-		aboutRightItem.forEach(item=>{
-			item.classList.add("active")
+section.forEach(item=>{
+	if(item.classList.contains("animate")){
+		window.addEventListener("scroll",()=>{
+			if(about.classList.contains("fade-top")){
+				aboutRight.classList.add("active")
+				aboutRightItem.forEach(item=>{
+					item.classList.add("active")
+				})
+			}else{
+				aboutRight.classList.remove("active")
+				aboutRightItem.forEach(item=>{
+					item.classList.remove("active")
+				})
+			}
+			let margeTop = window.scrollY
+			sectionAnimate.forEach(item=>{
+				const sectionTop = item.offsetTop - (item.offsetTop / 5)
+				if(margeTop < sectionTop){
+					item.classList.remove("fade-top")
+				}else if(!item.classList.contains("fade-top") && margeTop > sectionTop){
+					item.classList.add("fade-top")
+				}
 		})
-	}else{
-		aboutRight.classList.remove("active")
-		aboutRightItem.forEach(item=>{
-			item.classList.remove("active")
 		})
 	}
-	let margeTop = window.scrollY
-	sectionAnimate.forEach(item=>{
-		const sectionTop = item.offsetTop - (item.offsetTop / 5)
-		if(margeTop < sectionTop){
-			item.classList.remove("fade-top")
-		}else if(!item.classList.contains("fade-top") && margeTop > sectionTop){
-			item.classList.add("fade-top")
+})
+
+
+
+
+
+const tab = document.querySelectorAll(".tab")
+
+tab.forEach(item=>{
+	item.addEventListener("click",()=>{
+		for(let i = 0; i < tab.length; i++){
+			tab[i].classList.remove("active")
 		}
+		item.classList.add("active")
+	})
 })
-})
+
 
 const orderLabel = document.querySelectorAll(".checkbox__item")
 const arr = []

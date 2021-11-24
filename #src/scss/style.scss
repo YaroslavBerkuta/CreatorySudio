@@ -10,6 +10,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  color: white;
 }
 
 * {
@@ -41,6 +42,7 @@ body {
 }
 
 section {
+  padding: 100px 0 0 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1284,6 +1286,104 @@ input[type=checkbox] {
     color: #FFFFFF;
   }
 }
+.project__title{
+  .title{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+}
+  h3{
+    margin: 32px 0;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+    color: #E5E5E5;
+  }
+}
+.project__tab{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 760px;
+}
+.tab{
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #151515;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8B8B8B;
+  margin-bottom: 24px;
+  transition: all .3s linear;
+  &.active{
+    background: #FFFFFF;
+    color: #0B0B0B;
+  }
+  &:not(:nth-child(6n)){
+    margin-right: 24px;
+  }
+}
+.project__list{
+  margin-top: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project__list-item{
+  flex: 0 0 48%;
+  margin-bottom: 24px;
+  padding-top: 100px;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  img{
+    object-fit: cover;
+    height: 467px;
+  }
+  &:nth-child(3n){
+    padding-top: 0;
+    flex: 0 0 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    img{
+      height: 100%;
+    }
+    .project__info{
+      max-width: 600px;
+      span{
+        padding: 46px 0 0 0;
+      }
+    }
+  }
+}
+.project__info{
+  margin-top: 31px;
+  padding-left: 48px;
+  h4{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+  }
+  span{
+    display: inline-block;
+    padding: 46px 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+}
+
+
+
+
 
 @media (max-width: 1440px) {
   .aboutUs__right-item p {
