@@ -1187,6 +1187,7 @@ footer {
 }
 
 .cost__input {
+  width: 80px !important;
   all: unset;
   color: #8B8B8B;
   font-weight: bold;
@@ -1195,7 +1196,7 @@ footer {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  padding: 11px 0 11px 18px;
+  padding: 11px 0 11px 0;
 }
 
 .range-slider {
@@ -1468,6 +1469,22 @@ input[type=checkbox] {
   border-radius: 6px;
 }
 
+.order__section-flex input[type=email] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+  background: #151515;
+  border-radius: 6px;
+  border: none;
+  padding: 12px 0 12px 24px;
+  outline: none;
+  color: #fff;
+}
+
+.order__section-flex input[type=email]:focus {
+  border: 1px solid red;
+}
+
 .order__section-flex input[type=text] {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45%;
@@ -1478,6 +1495,10 @@ input[type=checkbox] {
   padding: 12px 0 12px 24px;
   outline: none;
   color: #fff;
+}
+
+.order__section-flex input[type=text]:focus {
+  border: 1px solid red;
 }
 
 .order__section-flex input[type=text]:not(:last-child) {
@@ -2188,6 +2209,13 @@ input[type=checkbox] {
     margin-bottom: 20px;
   }
 
+  .order__section-flex input[type="email"] {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+
   .price__estimate {
     font-size: 16px;
   }
@@ -2298,5 +2326,39 @@ input[type=checkbox] {
 
   .order__checkbox .checkbox__item {
     padding: 12px 12px;
+  }
+
+  .project__list-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .project__list-item img {
+    height: auto;
+  }
+
+  .project__info h4 {
+    font-size: 24px;
+  }
+
+  .project__list-item:nth-child(3n) .project__info span {
+    padding: 20px 0 0 0;
+  }
+
+  .project__info {
+    padding-left: 20px;
+  }
+
+  .tab {
+    margin-right: 10px;
+  }
+
+  .tab:not(:nth-child(6n)) {
+    margin-right: 10px;
+  }
+
+  .project__list {
+    margin-top: 50px;
   }
 }
